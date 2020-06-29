@@ -62,7 +62,7 @@ plot(x = gene.transcript$log2FoldChange.L8_DOXvsL8.,
 # Then add your labels to your plot only for genes whos
 # adjusted p-values that are less than or equal to 0.05 
 # AND 
-# log2 fold change greater than 1.5 (or 2 -- whatever you think is most improtant)
+# log2 fold change that is 1.5 in the positive or negative direction (or 2 -- whatever you think is most important)
 text(x = gene.transcript$log2FoldChange.L8_DOXvsL8., 
      y = -log10(gene.transcript$pvalue.L8_DOXvsL8.), 
      labels = ifelse(gene.transcript$padj.L8_DOXvsL8. <= 0.05 & abs(gene.transcript$log2FoldChange.L8_DOXvsL8.) >= 1.5, 
