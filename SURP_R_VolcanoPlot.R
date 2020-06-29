@@ -13,19 +13,19 @@
 #   1. Review of how to read in and analyze data
 # Start every session with setting your working directory
 
-setwd("/Users/txc065//Downloads/") # Or however works for your computer
+setwd("/Users/txc065/Downloads/SURP_RPlots-master") # Or however works for your computer
 
 # Then make sure to add the libraries you'll be needing for the commands in this Script
 library(ggplot2)
 library(gplots)
 
-
 # Next we want to read in the data 
-# You need to include a path that goes to your viles
-gene.transcript=read.csv("/Users/txc065/Downloads/SURP_RPlots-master/gene.description_sub.csv")
+# You need to include a path that goes to your files
+# Uncomment if you want to include the entire path
+#gene.transcript=read.csv("/Users/txc065/Downloads/SURP_RPlots-master/gene.description_sub.csv")
 
 # Or if you're already in the same directory as your files you can just do
-gene.transcript=read.csv("/gene.description_sub.csv")
+gene.transcript=read.csv("gene.description_sub.csv")
 
 #Check how many dimensions the dataset has (rows and columns)
 dim(gene.transcript)
@@ -37,7 +37,9 @@ colnames(gene.transcript)
 class(gene.transcript)
 
 # To look at your data set you can use the function View()
-View(gene.transcript)
+# Uncomment if you want to View() your data 
+
+#View(gene.transcript)
 
 
 #   2. Volcano Plots
